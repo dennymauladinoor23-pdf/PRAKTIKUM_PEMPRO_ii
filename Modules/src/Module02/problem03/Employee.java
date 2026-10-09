@@ -15,7 +15,8 @@ public class Employee {
     public String getOrigin() {
         return origin;
     }
-
+    //Method setRole() tidak memiliki parameter untuk menerima nilai r
+    //public void setRole()
     public void setRole(String r) {
         this.role = r;
     }

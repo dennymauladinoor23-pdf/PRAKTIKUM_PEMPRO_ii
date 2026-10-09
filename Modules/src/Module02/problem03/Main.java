@@ -8,7 +8,7 @@ public class Main {
         //e.name = "Roi"
         e.name = "Roi";
         e.origin = "Kingdom of Orvel";
-        e.setRole("Assasin");
+
         //tidak ada nilai untuk attribut age yang menjadikan output 0/Null
         //-
         e.age = 17;
@@ -19,6 +19,6 @@ public class Main {
         System.out.println("Jabatan: " + e.role);
         //tidak mencetak kata "Tahun" diujung teks output
         //System.out.println("Umur: " + e.age);
-        System.out.println("Umur: " + e.age+ "Tahun");
+        System.out.println("Umur: " + e.age+ " Tahun");
     }
 }
