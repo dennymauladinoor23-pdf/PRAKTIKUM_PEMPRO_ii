@@ -1,26 +1,42 @@
 package Module02.problem01;
 
 public class Fruit {
-    // TODO: Deklarasikan attribute private
+    private String fruitName;
+    private Double weight;
+    private Double price;
+    private Double purchaseTotal;
+    private Double pricePerKg;
 
-    // TODO: Buat constructor buah
-    public Fruit() {
-
+    public Fruit (String fruitName, Double weight,  Double price, Double purchaseTotal){
+        this.fruitName = fruitName;
+        this.weight = weight;
+        this.price = price;
+        this.purchaseTotal=purchaseTotal;
+        this.pricePerKg = this.price / this.weight;
     }
 
-    // TODO: Buat method untuk mencetak informasi tentang buah
+
     public void printInfo() {
 
+        System.out.println("Nama Buah: " + this.fruitName);
+        System.out.println("Berat: " + this.weight);
+        System.out.println("Harga: " + this.price);
+        System.out.printf("Jumlah Beli: %.1fkg\n", this.purchaseTotal);
+        System.out.printf("Harga Sebelum Diskon: Rp%.2f\n", getPreDiscountPrice());
+        System.out.printf("Total Diskon: Rp%.2f\n", getDiscountTotal());
+        System.out.printf("Harga Setelah Diskon: Rp%.2f\n\n", getPostDiscountPrice());
     }
 
-    // TODO: Buat method untuk menghitung harga sebelum diskon
     public double getPreDiscountPrice() {
-        return 0;
+        return this.price / this.weight* this.purchaseTotal;
     }
 
-    // TODO: Buat method untuk menghitung total diskon
     public double getDiscountTotal() {
-        return 0;
+        int discountThresholdKg = 4;
+        double discountPercentage = 0.02;
+
+        int discountBatches = (int)(this.purchaseTotal / discountThresholdKg);
+        return discountBatches * (discountThresholdKg * this.pricePerKg) * discountPercentage;
     }
 
     public double getPostDiscountPrice() {
