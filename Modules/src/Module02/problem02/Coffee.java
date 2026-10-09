@@ -1,7 +1,5 @@
 package Module02.problem02;
 
-import java.util.Locale;
-
 public class Coffee {
     private String name;
     private String size;
@@ -28,13 +26,11 @@ public class Coffee {
     public void setCustomer(String customer) {
         this.customer = customer;
     }
-    // TODO: Buat 2 getter method sesuai Main.java
     public String getCustomer() {
         return this.customer;
     }
 
     public double getTax() {
-        // Pajak sebesar 11% (0.11) dari harga
         return this.price * 0.11;
     }
 }

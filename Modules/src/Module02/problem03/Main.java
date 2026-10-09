@@ -12,10 +12,13 @@ public class Main {
         //tidak ada nilai untuk attribut age yang menjadikan output 0/Null
         //-
         e.age = 17;
-
-        System.out.println("Nama Pegawai: " + e.getName());
+        //output yang dinginkan bukan "Nama pegawai",melainkan "Nama"
+        //System.out.println("Nama Pegawai: " + e.getName());
+        System.out.println("Nama: " + e.getName());
         System.out.println("Asal: " + e.getOrigin());
         System.out.println("Jabatan: " + e.role);
-        System.out.println("Umur: " + e.age);
+        //tidak mencetak kata "Tahun" diujung teks output
+        //System.out.println("Umur: " + e.age);
+        System.out.println("Umur: " + e.age+ "Tahun");
     }
 }
